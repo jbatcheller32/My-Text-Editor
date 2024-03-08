@@ -24,8 +24,8 @@ module.exports = () => {
       }),
 
       new WebpackPwaManifest({
-        name: 'Text Editor', 
-        short_name: 'Text Editor', 
+        name: 'Text Editor',
+        short_name: 'Text Editor',
         description: 'Text editor that you can use offline',
         background_color: '#7eb4e2',
         theme_color: '#7eb4e2',
@@ -35,16 +35,16 @@ module.exports = () => {
           {
             src: path.resolve('client/src/images/logo.png'),
             sizes: [96, 128, 192, 256, 384, 512],
-           
+
           },
         ]
-      }), 
-      new InjectManifest({ 
+      }),
+      new InjectManifest({
         swSrc: 'src-sw.js',
         swDest: 'service-worker.js',
       }),
 
-      
+
     ],
 
     module: {
@@ -63,7 +63,7 @@ module.exports = () => {
           test: /\.css$/,
           use: ['style-loader', 'css-loader'],
         },
-        
+
       ],
     },
   };
